@@ -1,0 +1,142 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="pt.ua.cm.smartdomotics.fragments.Kitchen">
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+
+        android:orientation="horizontal"
+
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+
+        android:paddingRight="16dp">
+
+        <ImageView
+
+            android:id="@+id/kitchen_icon"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentStart="true"
+
+            android:contentDescription="Turn on/off the Chandelier"
+
+            android:paddingEnd="10dp"
+
+            android:paddingBottom="30dp"
+
+            android:paddingStart="10dp"
+
+            android:src="@drawable/lightbulb" />
+
+        <TextView
+
+            android:id="@+id/kitchen_light"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_above="@+id/kitchen_smoke_icon"
+
+            android:layout_alignParentTop="true"
+
+            android:paddingBottom="30dp"
+
+            android:layout_toRightOf="@id/kitchen_icon"
+
+            android:text="Light"
+
+            android:textSize="18sp" />
+
+        <Switch
+
+            android:id="@+id/kitchen_light_switch"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:paddingEnd="10dp"
+
+            android:paddingStart="10dp"
+
+            android:paddingBottom="30dp"
+
+            android:layout_above="@+id/kitchen_smoke_alarm"
+
+            android:layout_alignParentEnd="true" />
+
+        <ImageView
+
+            android:id="@+id/kitchen_smoke_icon"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentStart="true"
+
+            android:layout_below="@id/kitchen_icon"
+
+            android:paddingBottom="30dp"
+
+            android:contentDescription="Turn on/off the smoke alarm"
+
+            android:paddingEnd="10dp"
+
+            android:paddingStart="10dp"
+
+            android:src="@drawable/cloud"
+
+            android:layout_alignBottom="@+id/kitchen_smoke_alarm" />
+
+        <TextView
+
+            android:id="@+id/kitchen_smoke_alarm"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:paddingBottom="30dp"
+
+            android:text="Smoke Alarm"
+
+            android:textSize="18sp"
+
+            android:layout_below="@+id/kitchen_icon"
+
+            android:layout_toEndOf="@+id/kitchen_smoke_icon" />
+
+        <Switch
+
+            android:id="@+id/kitchen_smoke_alarm_switch"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentEnd="true"
+
+            android:paddingBottom="30dp"
+
+            android:layout_below="@id/kitchen_light_switch"
+
+            android:paddingEnd="10dp"
+
+            android:paddingStart="10dp"
+
+            android:layout_alignBottom="@+id/kitchen_smoke_alarm" />
+
+    </RelativeLayout>
+
+
+</FrameLayout>

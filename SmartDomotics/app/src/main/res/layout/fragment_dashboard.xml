@@ -1,0 +1,59 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="pt.ua.cm.smartdomotics.fragments.Dashboard">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp">
+
+        <ImageView
+            android:id="@+id/kitchen_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:paddingEnd="10dp"
+            android:paddingBottom="30dp"
+            android:paddingStart="10dp"
+            android:src="@drawable/ic_brightness_low_black_24dp" />
+
+        <TextView
+
+            android:id="@+id/dashboard_temp_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/kitchen_icon"
+            android:text="House Temperature"
+            android:paddingBottom="30dp"
+            android:textSize="18sp"
+            android:layout_alignBottom="@+id/kitchen_icon"/>
+
+        <TextView
+            android:id="@+id/dashboard_temp_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/kitchen_icon"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:paddingBottom="30dp"
+            android:textSize="18sp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/read_barcode"
+            android:id="@+id/read_barcode"
+            android:onClick="onClick"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+</FrameLayout>

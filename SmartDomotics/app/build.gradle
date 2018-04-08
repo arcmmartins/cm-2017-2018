@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        applicationId "pt.ua.cm.smartdomotics"
+        minSdkVersion 22
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    dataBinding {
+        enabled = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    // https://mvnrepository.com/artifact/org.zeromq/jeromq
+    compile group: 'org.zeromq', name: 'jeromq', version: '0.4.2'
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support:design:26.+'
+    compile 'com.android.support:support-v4:26.+'
+    compile 'com.android.support:cardview-v7:26.+'
+    compile 'com.android.support:recyclerview-v7:26.+'
+    testCompile 'junit:junit:4.12'
+    compile 'com.kontaktio:sdk:3.3.0'
+    compile 'com.google.android.gms:play-services-vision:11.0.4'
+    compile 'android.arch.lifecycle:extensions:1.0.0-beta2'
+    compile 'android.arch.persistence.room:runtime:1.0.0-beta2'
+    annotationProcessor 'android.arch.lifecycle:compiler:1.0.0-beta2'
+    annotationProcessor 'android.arch.persistence.room:compiler:1.0.0-beta2'
+}
